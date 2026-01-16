@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STRUHA Consultants Portfolio</title>
+<style>
+    /* --- GENERAL RESET --- */
+    body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f6f8; color: #333; }
+    table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+    img { display: block; border: 0; max-width: 100%; height: auto; }
+    
+    .container { width: 100%; max-width: 800px; margin: 0 auto; background-color: #ffffff; box-shadow: 0px 4px 15px rgba(0,0,0,0.1); }
+    
+    /* --- HERO --- */
+    .hero { background-color: #003366; padding: 30px 20px; color: white; }
+    .logo-box { width: 100px; height: 100px; background-color: #ffffff; border: 2px solid #d4af37; overflow: hidden; }
+    .logo-box img { width: 100%; height: 100%; object-fit: contain; }
+    .hero-text { padding-left: 20px; text-align: left; }
+    .hero h1 { margin: 0; font-size: 32px; text-transform: uppercase; letter-spacing: 2px; line-height: 1.2; }
+    .hero p { color: #d4af37; font-size: 14px; margin-top: 5px; font-weight: bold; letter-spacing: 1px; }
+
+    /* --- TITLES --- */
+    .section-title { 
+        text-align: center; font-size: 24px; color: #003366; font-weight: 800; 
+        margin: 50px 0 30px; text-transform: uppercase; border-bottom: 2px solid #d4af37; 
+        display: inline-block; padding-bottom: 5px;
+    }
+    .center-box { text-align: center; width: 100%; }
+
+    /* --- TEAM --- */
+    .team-box { padding: 20px; background: #fff; border: 1px solid #ddd; margin-bottom: 20px; text-align: center; }
+    .team-img-circle { 
+        width: 130px; height: 150px; border-radius: 10%; object-fit: cover; 
+        border: 4px solid #000000; margin: 0 auto 15px; background-color: #eee;
+    }
+    .t-name { font-size: 18px; font-weight: bold; color: #003366; }
+    .t-role { color: #d4af37; font-size: 13px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; }
+    .t-desc { font-size: 13px; color: #555; line-height: 1.5; text-align: left; margin-top: 10px; }
+
+    /* --- WORKFLOW --- */
+    .timeline-container { padding: 20px; background-color: #fdfdfd; border: 1px solid #eee; }
+    .timeline-item { 
+        position: relative; padding-left: 40px; padding-bottom: 20px; 
+        border-left: 3px solid #003366; margin-left: 20px; 
+    }
+    .timeline-item:last-child { border-left: 3px solid transparent; }
+    .timeline-dot { 
+        position: absolute; left: -11px; top: 0; width: 20px; height: 20px; 
+        background: #d4af37; border-radius: 50%; border: 3px solid #fff; 
+    }
+    .timeline-head { font-weight: bold; color: #003366; font-size: 16px; }
+    .timeline-body { font-size: 14px; color: #555; margin-top: 5px; }
+
+    /* --- PROJECTS --- */
+    .project-grid { display: table; width: 100%; }
+    .project-cell { display: table-cell; width: 50%; padding: 10px; vertical-align: top; }
+    .project-card { border: 1px solid #ddd; background: #fff; height: 100%; }
+    .project-img-box { width: 100%; height: 180px; background-color: #ccc; overflow: hidden; }
+    .project-img-box img { width: 100%; height: 100%; object-fit: cover; }
+    .project-txt { padding: 15px; }
+    .p-title { font-size: 16px; font-weight: bold; color: #003366; margin-bottom: 5px; }
+    .p-sub { font-size: 12px; color: #d4af37; font-weight: bold; text-transform: uppercase; margin-bottom: 8px; }
+    .p-desc { font-size: 13px; color: #666; line-height: 1.4; }
+
+    /* --- CERTIFICATIONS (IMAGES) --- */
+    .cert-cell { padding: 10px; width: 50%; vertical-align: top; }
+    .cert-img-box { 
+        border: 2px dashed #003366; background: #000000; padding: 5px; 
+        text-align: center; height: 250px; position: relative;
+    }
+    .cert-img-box img { width: 100%; height: 100%; object-fit: contain; }
+    .cert-label { 
+        margin-top: 5px; font-weight: bold; color: #003366; font-size: 14px; text-align: center;
+        background: #eee; padding: 5px; 
+    }
+
+    /* --- FOOTER --- */
+    .footer { background: #222; color: #fff; padding: 40px 20px; text-align: center; }
+    .footer a { color: #d4af37; text-decoration: none; }
+
+    @media only screen and (max-width: 600px) {
+        .project-cell, .cert-cell { display: block; width: 100%; }
+        .hero-text { text-align: center; padding-left: 0; padding-top: 10px; }
+        .logo-box { margin: 0 auto; }
+        .hero td { display: block; width: 100%; text-align: center; }
+    }
+</style>
+</head>
+<body>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f4f6f8">
+    <tr>
+        <td align="center">
+            
+            <table class="container" cellpadding="0" cellspacing="0" border="0">
+                
+                <tr>
+                    <td class="hero">
+                        <table width="100%">
+                            <tr>
+                                <td width="110" valign="middle" align="center">
+                                    <div class="logo-box">
+                                        <img src="image/logo.png" alt="Struha Logo">
+                                    </div>
+                                </td>
+                                <td valign="middle" class="hero-text">
+                                    <h1>STRUHA CONSULTANTS</h1>
+                                    <p>Structural Engineering | Design | Advisory</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 20px 40px;">
+                        <div class="center-box"><div class="section-title">1. Company Profile</div></div>
+                        <p style="text-align: center; line-height: 1.6; color: #444;">
+                            <strong>Struha Consultants</strong> specializes in RCC and steel structures, delivering excellence across residential, commercial, and industrial sectors. With over 10 years of expertise, we ensure every project meets rigorous safety standards using advanced analysis tools.
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 0 20px;">
+                        <div class="center-box"><div class="section-title">2. Working Team</div></div>
+                        <table width="100%">
+                            <tr>
+                                <td width="50%" valign="top" style="padding: 5px;">
+                                    <div class="team-box">
+                                        <img src="image/persion1.png" alt="Er. Digambar Kumbhar" class="team-img-circle">
+                                        <div class="t-name">Er. Digambar A. Kumbhar</div>
+                                        <div class="t-role">Founder</div>
+                                        <div class="t-desc">
+                                            • <strong>Education:</strong> B.E. Civil | M.E. Structures (BITS Pilani)<br>
+                                            • <strong>Exp:</strong> 10+ Years. J+W Consultants, Ducon Consultants, S.W. Mone Consultants.
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="50%" valign="top" style="padding: 5px;">
+                                    <div class="team-box">
+                                        <img src="image/persion2.png" alt="Er. Suraj Dhekale" class="team-img-circle">
+                                        <div class="t-name">Er. Suraj R. Dhekale</div>
+                                        <div class="t-role">Associate Member</div>
+                                        <div class="t-desc">
+                                            • <strong>Education:</strong> B.Tech Civil | M.Tech Structure (RIT Islampur)<br>
+                                            • <strong>Exp:</strong> 2 Years in Design & 2 Years in Site Execution.
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                                                        
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0 20px;">
+                        <div class="center-box"><div class="section-title">3. Successful Projects</div></div>
+                        
+                        <h3 style="padding-left:10px; color:#555; border-bottom:1px solid #ccc;">Commercial & IT</h3>
+                        <table class="project-grid">
+                            <tr>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/PANCHASHIL.png" alt="Panchshil"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">1. Panchshil Business Hub</div>
+                                            <div class="p-sub">Panchshil Developer | Kharadi</div>
+                                            <div class="p-desc">3 Basement + 2 Parking + 17 Office Floors. Single handed coordinated.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/indeco.png" alt="Indeco"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">2. Indeco Business Center</div>
+                                            <div class="p-sub">Indeco Reality | Mundhwa</div>
+                                            <div class="p-desc">2 Commercial Towers (40,000 sq.ft).</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/commune.png" alt="41 Commune"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">3. 41 Commune</div>
+                                            <div class="p-sub">Krisala Developer</div>
+                                            <div class="p-desc">Commercial + Residential building.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/sk.png" alt="SK Complex"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">4. SK Complex</div>
+                                            <div class="p-sub">Pune</div>
+                                            <div class="p-desc">Basement + Shop + Mezza + 1 Commercial + 2 Residential Floors.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <h3 style="padding-left:10px; color:#555; border-bottom:1px solid #ccc;">High-Rise Residential</h3>
+                        <table class="project-grid">
+                            <tr>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/rohan.png" alt="Rohan Harita"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">5. Rohan Harita</div>
+                                            <div class="p-sub">Tathwade | 9 Towers</div>
+                                            <div class="p-desc">2 Basement + 4 Parking + 28 to 32 Residential Floors.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/bungalowa.png" alt="Efficiency Housing"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">6. BUNGALOWS</div>
+                                            <div class="p-sub">STRUHA CONSULTANTS</div>
+                                            <div class="p-desc">75+ With & without Sanctioned RCC Bungalow , 10+ Temples completed,25+ G+4,5,6,7 floors apartments</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/kop.png" alt="Residential Tower"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">7.  YASHYASHREE,RANKALA KOLHAPUR</div>
+                                            <div class="p-sub">STRUHA CONSULTANTS</div>
+                                            <div class="p-desc">Foundation Layout, Site Excavation condition</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/ss.png" alt="Central Park"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">8. PROJECT SPOTLIGHT</div>
+                                            <div class="p-sub">STRUHA CONSULTANTS</div>
+                                            <div class="p-desc">Basement + 15 Floors Residential.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/marvella.png" alt="Marvella"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">9. Marvella</div>
+                                            <div class="p-sub">New Front Group | Dhayari</div>
+                                            <div class="p-desc">Basement + 11 Floors Residential.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/solitaire.png" alt="Solitaire"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">10. Solitaire Kothrud</div>
+                                            <div class="p-sub">Solitaire</div>
+                                            <div class="p-desc">Towers A, B and SRA buildings.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/skyline.png" alt="Skyline"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">11. Skyline Developers</div>
+                                            <div class="p-sub">Skyline</div>
+                                            <div class="p-desc">5 Projects Successfully Completed.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/siddh.png" alt="Amara"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">12. Amara</div>
+                                            <div class="p-sub">Siddh Group</div>
+                                            <div class="p-desc">Wing A-B-C, Ground + 9 Residential Floors.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <h3 style="padding-left:10px; color:#555; border-bottom:1px solid #ccc;">Institutional</h3>
+                        <table class="project-grid">
+                            <tr>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/IIThostel.png" alt="IIT Hostel"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">13. IIT Bombay Hostel 4</div>
+                                            <div class="p-sub">IIT Bombay</div>
+                                            <div class="p-desc">G + 10 Floors.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/IIThostel.png" alt="Academic Block"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">14. Academic Science Block 1 & 2</div>
+                                            <div class="p-sub">IIT Bombay</div>
+                                            <div class="p-desc">1 Basement + 10 Floors.</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="project-cell">
+                                    <div class="project-card">
+                                        <div class="project-img-box"><img src="image/school.png" alt="School"></div>
+                                        <div class="project-txt">
+                                            <div class="p-title">15. Blooming International School</div>
+                                            <div class="p-sub">Gahunje, Pune</div>
+                                            <div class="p-desc">Ground + 4 Floors (3 provisional floors).</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="project-cell"></td>
+                            </tr>
+                        </table>
+
+                         <h3 style="padding-left:10px; color:#555; border-bottom:1px solid #ccc;">Industrial & PEB</h3>
+                         <table class="project-grid">
+                             <tr>
+                                 <td class="project-cell">
+                                     <div class="project-card">
+                                         <div class="project-img-box"><img src="image/ped.png" alt="PEB Shed"></div>
+                                         <div class="project-txt">
+                                             <div class="p-title">16. PEB Shed</div>
+                                             <div class="p-sub">Pune</div>
+                                             <div class="p-desc">Pre-Engineered Building Structure.</div>
+                                         </div>
+                                     </div>
+                                 </td>
+                                 <td class="project-cell">
+                                     <div class="project-card">
+                                         <div class="project-img-box"><img src="image/liberty.png" alt="Liberty"></div>
+                                         <div class="project-txt">
+                                             <div class="p-title">17. Liberty International Ltd</div>
+                                             <div class="p-sub">GIDC, Gujarat</div>
+                                             <div class="p-desc">Industrial facility project.</div>
+                                         </div>
+                                     </div>
+                                 </td>
+                             </tr>
+                         </table>
+
+                         <h3 style="padding-left:10px; color:#555; border-bottom:1px solid #ccc;">Regional & Specialty</h3>
+                         <table class="project-grid">
+                             <tr>
+                                 <td class="project-cell">
+                                     <div class="project-card">
+                                         <div class="project-img-box"><img src="image/akreet.png" alt="Akreeti"></div>
+                                         <div class="project-txt">
+                                             <div class="p-title">18. Akreeti Apartment</div>
+                                             <div class="p-sub">Pune</div>
+                                             <div class="p-desc">Ground + 6 Residential Floors.</div>
+                                         </div>
+                                     </div>
+                                 </td>
+                                 <td class="project-cell">
+                                     <div class="project-card">
+                                         <div class="project-img-box"><img src="image/kolapkar.png" alt="Kolapkar"></div>
+                                         <div class="project-txt">
+                                             <div class="p-title">19. Kolapkar Developer</div>
+                                             <div class="p-sub">Pune</div>
+                                             <div class="p-desc">Residential building - Ground + 6 Floors.</div>
+                                         </div>
+                                     </div>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="project-cell">
+                                     <div class="project-card">
+                                         <div class="project-img-box"><img src="image/yashyashree.png" alt="Yashyashree"></div>
+                                         <div class="project-txt">
+                                             <div class="p-title">20. Yashyashree</div>
+                                             <div class="p-sub">Rankala, Kolhapur</div>
+                                             <div class="p-desc">2 Basement + Shop at Ground + 6 Floors (Wing A & B).</div>
+                                         </div>
+                                     </div>
+                                 </td>
+                                 <td class="project-cell">
+                                     <div class="project-card">
+                                         <div class="project-img-box"><img src="image/paradise.png" alt="Paradise Cove"></div>
+                                         <div class="project-txt">
+                                             <div class="p-title">21. Paradise Cove</div>
+                                             <div class="p-sub">Bavada, Kolhapur</div>
+                                             <div class="p-desc">Ground Floor + 1 Podium Floor + 8 Residential Floors.</div>
+                                         </div>
+                                     </div>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="project-cell">
+                                     <div class="project-card">
+                                         <div class="project-img-box"><img src="image/temple.png" alt="Temple"></div>
+                                         <div class="project-txt">
+                                             <div class="p-title">22. Bhairavnath Temple</div>
+                                             <div class="p-sub">Baner, Pune</div>
+                                             <div class="p-desc">Traditional temple structure design.</div>
+                                         </div>
+                                     </div>
+                                 </td>
+                                 <td class="project-cell">
+                                     <div class="project-card">
+                                         <div class="project-img-box"><img src="image/bungalowa.png" alt="Summary"></div>
+                                         <div class="project-txt">
+                                             <div class="p-title">Private Residences</div>
+                                             <div class="p-sub">Miscellaneous</div>
+                                             <div class="p-desc">75+ Sanctioned RCC Bungalows, 10+ Temples, 25+ G+4 Apartments.</div>
+                                         </div>
+                                     </div>
+                                 </td>
+                             </tr>
+                         </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 20px 30px;">
+                        <div class="center-box"><div class="section-title">4. Services</div></div>
+                        <table width="100%" cellspacing="0" cellpadding="10" border="0">
+                            <tr>
+                                <td style="border-bottom:1px solid #ddd;"><strong>► RCC & Steel Structural Design</strong></td>
+                                <td style="border-bottom:1px solid #ddd;"><strong>► Structural Stability Certification</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom:1px solid #ddd;"><strong>► Retrofitting & Strengthening</strong></td>
+                                <td style="border-bottom:1px solid #ddd;"><strong>► Foundation Design (Raft, Pile)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>► Site Execution Support</strong></td>
+                                <td><strong>► PEB & Industrial Design</strong></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 20px 40px;">
+                        <div class="center-box"><div class="section-title">5. Design Workflow</div></div>
+                        <div class="timeline-container">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-head">01. Requirement Discussion</div>
+                                <div class="timeline-body">Understanding client needs and project scope.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-head">02. Preliminary Design</div>
+                                <div class="timeline-body">Conceptual design layout and initial scheme.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-head">03. Final Analysis & Detailing</div>
+                                <div class="timeline-body">Calculations and reinforcement detailing.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-head">04. Drawing Submission</div>
+                                <div class="timeline-body">Submission for approval.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-head">05. Site Coordination</div>
+                                <div class="timeline-body">On-site structural coordination & certification.</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td style="background:#003366; color:white; padding:30px;">
+                        <div class="center-box"><h3 style="color:#fff; margin-top:0;">6. Technical Proficiency</h3></div>
+                        <table width="100%">
+                            <tr>
+                                <td width="50%" valign="top">
+                                    <h3 style="color:#d4af37; border-bottom:1px solid #555;">Software</h3>
+                                    <ul class="tech-list" style="color:#fff;">
+                                        <li style="color:#fff;">STAAD Pro</li>
+                                        <li style="color:#fff;">ETABS & SAFE</li>
+                                        <li style="color:#fff;">AutoCAD & Revit</li>
+                                        <li style="color:#fff;">Excel (Design tools)</li>
+                                    </ul>
+                                </td>
+                                <td width="50%" valign="top">
+                                    <h3 style="color:#d4af37; border-bottom:1px solid #555;">Standards</h3>
+                                    <ul class="tech-list" style="color:#fff;">
+                                        <li style="color:#fff;">IS 456-2000 (Plain & RC)</li>
+                                        <li style="color:#fff;">IS 875 (Design Loads)</li>
+                                        <li style="color:#fff;">IS 800 (Steel Code)</li>
+                                        <li style="color:#fff;">IS 1893 (Earthquake)</li>
+                                        <li style="color:#fff;">IS 13920 (Ductile)</li>
+                                        <li style="color:#fff;">IS 16700 (Tall Building)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 20px 20px;">
+                         <div class="center-box"><div class="section-title">7. Certifications & Licenses</div></div>
+                         <table width="100%">
+                             <tr>
+                                 <td class="cert-cell">
+                                     <div class="cert-img-box">
+                                         <img src="image/crt.png" alt="IEI Membership">
+                                     </div>
+                                     <div class="cert-label">IEI Membership: M-1811244</div>
+                                 </td>
+                                 <td class="cert-cell">
+                                     <div class="cert-img-box">
+                                         <img src="image/gov.png" alt="State License">
+                                     </div>
+                                     <div class="cert-label">State License: STATE/R/2024/APL/14355</div>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td class="cert-cell">
+                                     <div class="cert-img-box">
+                                         <img src="image/pmc.png" alt="PMC Reg">
+                                     </div>
+                                     <div class="cert-label">PMC Registration</div>
+                                 </td>
+                                 <td class="cert-cell">
+                                     <div class="cert-img-box">
+                                         <img src="image/pmclic.png" alt="Other Cert">
+                                     </div>
+                                     <div class="cert-label">Structural Stability / Other</div>
+                                 </td>
+                             </tr>
+                         </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="footer">
+                        <h2 style="margin: 0 0 20px 0; color: #d4af37;">CONTACT US</h2>
+                        <div style="font-size: 16px; line-height: 1.8;">
+                            <strong>Er. Digambar Ananda Kumbhar</strong><br>
+                            📞 +91 7729987455<br>
+                            ✉️ <a href="mailto:struhaconsultants@gmail.com">struhaconsultants@gmail.com</a><br>
+                            📍 Pune, Maharashtra
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+            </td>
+    </tr>
+</table>
+
+</body>
+</html>
